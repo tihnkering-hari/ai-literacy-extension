@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AI Literacy Assistant",
+  "version": "1.0.0",
+  "description": "Catches common AI interaction mistakes before they happen",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://chatgpt.com/*", "*://chat.openai.com/*", "*://claude.ai/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
